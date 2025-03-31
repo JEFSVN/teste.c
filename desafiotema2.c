@@ -7,14 +7,16 @@
     char codigo_cartaA[4] , codigo_cartaB[4];
     char cidadeA[20], cidadeB[20];
     int populacaoA, populacaoB;
-    float areaA = 5000, areaB = 60000;
+    float areaA, areaB;
     float pibA, pibB;
     int pontos_turisticosA, pontos_turisticosB;
     float densidade_Demografica1 , densidade_Demografica2;
     float percapita1 , percapita2 ;
-    float superpoderA;
-    float superpoderB;
-    int resultado;
+    
+    areaA = 50000;
+    areaB = 60000;
+
+
 // PREENCHIMENTO DE CADASTRO CARTA 1.
 
     printf("CADASTRO CARTA 1:\n");
@@ -61,62 +63,22 @@
 
     printf("densidade demorgrafica1 e %.3f\n", densidade_Demografica1);
     printf("percapita1 e %.3f\n", percapita1);
-    printf("densidade dmorgrafica2 e %.3f\n", densidade_Demografica2);
+    printf("densidade demorgrafica2 e %.3f\n", densidade_Demografica2);
     printf("percapita2 e %.3f\n", percapita2);
+     
+    printf("comparando de carta (atributo: AREA) \n");
+      
+    printf("carta 1 - sao paulo: 50.000\n", areaA);
+    printf("carta 2 - rio de janeiro: 60.000\n", areaB);
 
-    superpoderA = populacaoA + areaA + pibA + percapita1 + 1/ densidade_Demografica1 + pontos_turisticosA;
+    if (areaA > areaB){
+        printf("carta 1  vence\n");
 
-    printf("superpoder 1 e %3.f\n", superpoderA);
-
-    superpoderB = populacaoB + areaB + pibB + percapita2 + 1/ densidade_Demografica2 + pontos_turisticosB;
-
-    printf("superpoder B e %3.f\n", superpoderB);
-
-    printf("comparacao das cartas\n");
-
-    if (populacaoA > populacaoB) {
-        printf("populacao  carta 1 vence\n");
-
-    } else {
-        printf("populacao carta 2 vence\n");
-        }
-        if (areaA > areaB) {
-            printf("areaA  carta 1 vence\n");
-    
-        } else {
-            printf("area  carta 2 vence\n");
+    } else{
+        printf("carta 2  vence");
     }
-
-    if (pibA > pibB) {
-        printf("PIB  carta 1 vence\n");
-
-    } else {
-        printf("PIB carta 2 vence\n");
-        }
-        if (pontos_turisticosA > pontos_turisticosB) {
-            printf("pontos turisticos  carta 1 vence\n");
     
-        } else {
-            printf("pontos turisticos carta 2 vence\n");
-           }
-            if (densidade_Demografica1 < densidade_Demografica2) {
-                printf("densidade demografrica  carta 1 vence\n");
-        
-            } else {
-                printf("densidade demografica carta 2 vence\n");
-                }
-                if (percapita1 > percapita2) {
-                    printf("percapita  carta 1 vence\n");
-            
-                } else {
-                    printf("percapita carta 2 vence\n");
-                    }
-                    if (superpoderA > superpoderB) {
-                        printf("superpoder  carta 1 vence\n");
-                
-                    } else {
-                        printf("superpoder carta 2 vence");
-                    }
+     
+  
     return 0;
     }
-     
