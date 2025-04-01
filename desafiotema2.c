@@ -28,8 +28,7 @@
     scanf(" %s", &cidadeA);
     printf("População: ");
     scanf(" %d", &populacaoA);
-    printf("Area km: ");
-    scanf(" %f", &areaA);
+    printf("Area km: %.3f\n", areaA);
     printf("PIB: ");
     scanf(" %f", &pibA);
     printf("Numero de pontos turísticos: ");
@@ -47,8 +46,7 @@
     scanf(" %s", &cidadeB);
     printf("População: ");
     scanf(" %d", &populacaoB);
-    printf("Area km: ");
-    scanf(" %f", &areaB);
+    printf("Area km: %.3f\n", areaB);
     printf("PIB: ");
     scanf(" %f", &pibB);
     printf("Numero de pontos turísticos: ");
